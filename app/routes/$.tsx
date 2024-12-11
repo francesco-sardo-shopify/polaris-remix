@@ -1,11 +1,10 @@
 import { Page } from '@shopify/polaris';
 
-function CatchAllRoute() {
+function RouteNotFound() {
   return (
-    <Page title="CatchAllRoute" subtitle="Really helpful micro-copy goes here">
-      {/* Content removed */}
+    <Page title="RouteNotFound" subtitle="Try another one">
     </Page>
   );
 }
 
-export default CatchAllRoute;
+export default RouteNotFound;

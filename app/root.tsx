@@ -11,7 +11,7 @@ import { AppProvider } from '@shopify/polaris';
 import { useState, useCallback } from 'react';
 import { Frame, TopBar, Navigation } from '@shopify/polaris';
 import {
-  HomeFilledIcon,
+  HomeIcon,
   OrderFilledIcon,
   ProductFilledIcon,
   PersonFilledIcon,
@@ -20,7 +20,8 @@ import {
   ChartVerticalFilledIcon,
   TargetFilledIcon,
   DiscountFilledIcon,
-  GlobeFilledIcon,
+  MarketsFilledIcon,
+  WandIcon,
 } from '@shopify/polaris-icons';
 
 export const links: LinksFunction = () => [
@@ -76,13 +77,14 @@ function App() {
   );
 
   const navigationMarkup = (
-    <Navigation location="/">
+    <Navigation location="/polaris-studio">
       <Navigation.Section
         items={[
           {
             url: '/',
             label: 'Home',
-            icon: HomeFilledIcon,
+            selected: false,
+            icon: HomeIcon,
           },
           {
             url: '/orders',
@@ -100,9 +102,24 @@ function App() {
             icon: PersonFilledIcon,
           },
           {
+            url: '/marketing',
+            label: 'Marketing',
+            icon: TargetFilledIcon,
+          },
+          {
+            url: '/discounts',
+            label: 'Discounts',
+            icon: DiscountFilledIcon,
+          },
+          {
             url: '/content',
             label: 'Content',
             icon: ContentFilledIcon,
+          },
+          {
+            url: '/markets',
+            label: 'Markets',
+            icon: MarketsFilledIcon,
           },
           {
             url: '/finance',
@@ -114,41 +131,22 @@ function App() {
             label: 'Analytics',
             icon: ChartVerticalFilledIcon,
           },
-          {
-            url: '/marketing',
-            label: 'Marketing',
-            icon: TargetFilledIcon,
-          },
-          {
-            url: '/discounts',
-            label: 'Discounts',
-            icon: DiscountFilledIcon,
-          },
         ]}
       />
       <Navigation.Section
-        title="Sales Channels"
+        title="Apps"
         items={[
           {
-            url: '/my-app',
-            selected: location.startsWith('/my-app'),
-            label: 'Generic App',
-            icon: ChartVerticalFilledIcon,
+            url: '/polaris-studio',
+            label: 'Polaris Studio',
+            selected: true,
+            icon: WandIcon,
             subNavigationItems: [
               {
-                url: '/my-app/page-1',
+                url: '/polaris-studio/page-1',
                 label: 'Page 1',
               },
-              {
-                url: '/my-app/page-2',
-                label: 'Page 2',
-              },
             ],
-          },
-          {
-            url: '/online-store',
-            label: 'Online Store',
-            icon: GlobeFilledIcon,
           },
         ]}
       />

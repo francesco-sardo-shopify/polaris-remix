@@ -1,11 +1,10 @@
 import { Page } from '@shopify/polaris';
 
-function Index() {
+function Home() {
   return (
-    <Page title="Index" subtitle="Really helpful micro-copy goes here">
-      {/* Content removed */}
+    <Page title="Home" subtitle="Open the menu and select Polaris Studio">      
     </Page>
   );
 }
 
-export default Index;
+export default Home;
