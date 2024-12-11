@@ -1,11 +1,11 @@
 import { Page } from '@shopify/polaris';
 
-function MyApp() {
+function PolarisStudio() {
   return (
-    <Page title="MyApp" subtitle="Really helpful micro-copy goes here">
+    <Page title="PolarisStudio" subtitle="Really helpful micro-copy goes here">
       {/* Content removed */}
     </Page>
   );
 }
 
-export default MyApp;
+export default PolarisStudio;
