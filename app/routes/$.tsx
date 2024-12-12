@@ -1,10 +1,9 @@
 import { Page } from '@shopify/polaris';
 
-function RouteNotFound() {
+function Example() {
   return (
-    <Page title="RouteNotFound" subtitle="Try another one">
-    </Page>
+    <Page title="Example"></Page>
   );
 }
 
-export default RouteNotFound;
+export default Example;
