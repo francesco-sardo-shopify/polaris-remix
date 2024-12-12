@@ -77,7 +77,7 @@ function App() {
   );
 
   const navigationMarkup = (
-    <Navigation location="/polaris-studio">
+    <Navigation location="/">
       <Navigation.Section
         items={[
           {
@@ -141,12 +141,6 @@ function App() {
             label: 'Polaris Studio',
             selected: true,
             icon: WandIcon,
-            subNavigationItems: [
-              {
-                url: '/polaris-studio/page-1',
-                label: 'Page 1',
-              },
-            ],
           },
         ]}
       />
